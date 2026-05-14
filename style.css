@@ -1463,3 +1463,10 @@ footer a:hover { text-decoration: underline; }
 .cat-card:hover {
   box-shadow: 0 15px 40px rgba(30, 15, 6, 0.15);
 }
+
+
+/* Ensure logo is perfectly centered and scaled inside the dark ring */
+.logo-img {
+  object-fit: contain !important;
+  transform: scale(0.95);
+}
