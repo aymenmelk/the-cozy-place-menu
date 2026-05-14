@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Cozy Place – Restaurant Coffee Bar à Tunis. Café, Restaurant & Pizzeria. Menu complet avec boissons artisanales, pizzas, burgers et plus.">
+  <title>The Cozy Place – Restaurant Coffee Bar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/images/background.png">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     PARTICLES CANVAS
+═══════════════════════════════════════ -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ═══════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <!-- Decorative rings -->
+  <div class="rings">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+
+  <div class="hero-content">
+    <!-- Logo -->
+    <div class="logo-wrap">
+      <div class="logo-ring-outer"></div>
+      <div class="logo-ring-inner"></div>
+      <img
+        src="assets/images/background.png"
+        alt="The Cozy Place Logo"
+        class="logo-img"
+        onerror="this.style.display='none'"
+      >
+      <div class="logo-glow"></div>
+    </div>
+
+    <p class="hero-eyebrow">✦ Bienvenue à ✦</p>
+
+    <h1 class="hero-title">
+      The <em>Cozy</em><br>Place
+    </h1>
+
+    <p class="hero-tagline">Restaurant · Coffee Bar · Pizzeria</p>
+
+    <!-- Gold separator -->
+    <div class="gold-sep">
+      <div class="gold-sep-line"></div>
+      <div class="gold-sep-diamond"></div>
+      <div class="gold-sep-line r"></div>
+    </div>
+
+    <!-- Stars -->
+    <div class="star-row">
+      <svg class="star-svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star-svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="rating-text">5.0 · 18 avis Google</p>
+
+    <!-- Social buttons -->
+    <div class="socials">
+      <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" class="soc-btn soc-map">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Voir la localisation
+      </a>
+      <a href="https://www.instagram.com/thecozyplace2026?igsh=eHQzaGN6amtxN3Rw" target="_blank" class="soc-btn soc-insta">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @thecozyplace2026
+      </a>
+      <a href="https://g.page/r/CRBwZCJcymPjECE/review" target="_blank" class="soc-btn soc-google">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Laisser un avis
+      </a>
+    </div>
+
+    <!-- Info chips -->
+    <div class="info-bar">
+      <div class="info-chip">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Lac Huron, Tunis
+      </div>
+      <div class="info-chip">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        Ouvert jusqu'à 23:30
+      </div>
+      <div class="info-chip">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        54 915 604
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <span>Menu</span>
+    <div class="scroll-mouse"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     GOOGLE REVIEW SECTION
+═══════════════════════════════════════ -->
+<section class="review-section" id="reviews">
+  <div class="section-inner">
+
+    <div class="review-hero reveal">
+      <p class="sec-badge">Google Reviews</p>
+      <h2 class="sec-title">Votre <em>avis</em> compte</h2>
+      <div class="ornament">
+        <div class="orn-line"></div>
+        <div class="orn-diamond"></div>
+        <div class="orn-line r"></div>
+      </div>
+      <p class="sec-desc">Votre avis nous aide à grandir ❤️ — Chaque retour est précieux pour améliorer votre expérience chez The Cozy Place.</p>
+    </div>
+
+    <div class="review-layout">
+
+      <!-- QR Code Card -->
+      <div class="qr-card reveal">
+        <div class="qr-badge">📱 Scannez-moi</div>
+
+        <div class="qr-frame">
+          <img src="assets/images/QR_google_rate.png" alt="QR Code Google Reviews – The Cozy Place">
+        </div>
+
+        <div class="qr-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <div class="qr-title">Donnez votre avis<br>sur Google</div>
+        <div class="qr-subtitle">The Cozy Place · Tunis</div>
+        <p class="qr-heart">"Votre avis nous aide à grandir ❤️"</p>
+
+        <a href="https://g.page/r/CRBwZCJcymPjECE/review" target="_blank" class="review-btn">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#fff"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/>
+          </svg>
+          Laisser un avis Google
+        </a>
+      </div>
+
+      <!-- Steps column -->
+      <div class="steps-col reveal reveal-delay-2">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div>
+            <strong>Scannez le QR code</strong>
+            <span>Pointez votre appareil photo vers le code — Google s'ouvre directement</span>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div>
+            <strong>Choisissez vos étoiles</strong>
+            <span>De 1 à 5 étoiles pour la cuisine, le service et l'ambiance</span>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div>
+            <strong>Rédigez votre avis</strong>
+            <span>Partagez votre expérience — brunch, déjeuner, dîner ou autre</span>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div>
+            <strong>Ajoutez des photos</strong>
+            <span>Vos photos aident les futurs clients à découvrir notre ambiance</span>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">5</div>
+          <div>
+            <strong>Publiez — Merci !</strong>
+            <span>Votre avis apparaît sur Google pour tous ceux qui cherchent The Cozy Place</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Business Card -->
+    <div class="google-business reveal">
+      <div class="biz-header">
+        <svg class="biz-logo" viewBox="0 0 24 24">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        <div>
+          <div class="biz-name">The Cozy Place</div>
+          <div class="biz-type">Café · Restaurant · Pizzeria</div>
+        </div>
+      </div>
+      <div class="biz-rating">
+        <span class="biz-score">5,0</span>
+        <span class="biz-stars">★★★★★</span>
+        <span class="biz-count">18 avis Google</span>
+      </div>
+      <div class="biz-rows">
+        <div class="biz-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Rue du Lac Huron, Tunis 1053</span>
+        </div>
+        <div class="biz-row">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:54915604">54 915 604</a>
+        </div>
+        <div class="biz-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          <span><span class="open-badge">● Ouvert</span> · Ferme à 23:30</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MENU SECTION
+═══════════════════════════════════════ -->
+<section class="menu-section" id="menu">
+  <div class="section-inner">
+
+    <div class="menu-header reveal">
+      <p class="sec-badge">Notre Carte</p>
+      <h2 class="sec-title">Menu <em>Complet</em></h2>
+      <div class="ornament">
+        <div class="orn-line"></div>
+        <div class="orn-diamond"></div>
+        <div class="orn-line r"></div>
+      </div>
+      <p class="sec-desc">Café · Restaurant · Pizzeria — Une expérience culinaire complète du matin au soir</p>
+    </div>
+
+    <!-- Category filter nav -->
+    <nav class="cat-nav reveal">
+      <button class="cat-nav-btn active" onclick="filterCategory(this,'all')">Tout voir</button>
+      <button class="cat-nav-btn" onclick="filterCategory(this,'petit-dejeuner')">Petit Déjeuner</button>
+      <button class="cat-nav-btn" onclick="filterCategory(this,'drinks')">Boissons</button>
+      <button class="cat-nav-btn" onclick="filterCategory(this,'food')">Restauration</button>
+      <button class="cat-nav-btn" onclick="filterCategory(this,'coffee')">Café</button>
+      <button class="cat-nav-btn" onclick="filterCategory(this,'dessert')">Desserts</button>
+    </nav>
+
+    <!-- Cards grid -->
+    <div class="cards-grid">
+
+      <!-- ── FORMULES PETIT DÉJEUNER ── -->
+      <div class="cat-card highlight-card reveal" data-category="petit-dejeuner food">
+        <div class="highlight-bg">
+          <img src="assets/images/petit_dejeuner_atmosphere_1778656533946.png" alt="Petit Déjeuner Atmosphere">
+        </div>
+        <div class="highlight-overlay"></div>
+        <div class="card-header highlight-header">
+          <div class="card-title-group">
+            <div class="card-title" style="color:var(--gold2); font-size:26px;">Formules Petit Déjeuner</div>
+            <div class="highlight-note">Disponible de 07:00 à 11:30</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="menu-item premium-item">
+            <div class="item-info">
+              <span class="item-name">Menu Express</span>
+              <span class="item-desc">Café, Viennoiserie au choix</span>
+            </div>
+            <span class="item-price highlight-price">4.000 dt</span>
+          </div>
+          <div class="menu-item premium-item">
+            <div class="item-info">
+              <span class="item-name">Menu Classique</span>
+              <span class="item-desc">Café, Jus, Eau 0.5L, Viennoiserie au choix</span>
+            </div>
+            <span class="item-price highlight-price">6.000 dt</span>
+          </div>
+          <div class="menu-item premium-item">
+            <div class="item-info">
+              <span class="item-name">Menu Copio</span>
+              <span class="item-desc">Café, Jus, Eau 0.5L, Viennoiserie, Omelette, Beurre, Confiture, Toast</span>
+            </div>
+            <span class="item-price highlight-price">8.000 dt</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ── CORE COFFEE ── -->
+      <div class="cat-card reveal" data-category="coffee drinks">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Core_Coffee.png" alt="Core Coffee">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Core Coffee</div>
+            <div class="card-subtitle">Must-have basics</div>
+          </div>
+          <span class="card-count">6 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Espresso</span>
+            <span class="item-price">2.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Double espresso</span>
+            <span class="item-price">3.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Espresso macchiato</span>
+            <span class="item-price">3.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Cappuccino</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Latte</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Americano</span>
+            <span class="item-price">2.500 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CORE HOT DRINKS ── -->
+      <div class="cat-card reveal" data-category="coffee drinks">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Core_Hot_Drinks.png" alt="Core Hot Drinks">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Core Hot Drinks</div>
+            <div class="card-subtitle">Boissons chaudes</div>
+          </div>
+          <span class="card-count">3 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Hot chocolate</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Moccacino</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Vanilla latte</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CORE ICE DRINKS ── -->
+      <div class="cat-card reveal" data-category="cold drinks">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Core_Ice_Drinks.png" alt="Core Ice Drinks">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Core Ice Drinks</div>
+            <div class="card-subtitle">Boissons glacées</div>
+          </div>
+          <span class="card-count">4 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Ice chocola</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Ice latte</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Ice Americano</span>
+            <span class="item-price">3.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Ice vanilla latte</span>
+            <span class="item-price na">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SOFT DRINKS ── -->
+      <div class="cat-card reveal" data-category="drinks cold">
+        <div class="card-header">
+          <div class="card-icon" style="border-radius:12px; overflow:hidden;">
+            <img src="assets/images/soft_drinks_premium_1778656187646.png" alt="Soft Drinks" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Soft Drinks</div>
+            <div class="card-subtitle">Boissons rafraîchissantes</div>
+          </div>
+          <span class="card-count">6 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Eau minérale 0.5L</span>
+            <span class="item-price">1.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Eau minérale 1.5L</span>
+            <span class="item-price">2.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Schweppes</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Boga</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Coca Cola</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Fanta</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MOJITOS CORE ── -->
+      <div class="cat-card reveal" data-category="cold drinks">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Mojitos_Core.png" alt="Mojitos Core">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Mojitos Core</div>
+            <div class="card-subtitle">Cocktails sans alcool</div>
+          </div>
+          <span class="card-count">5 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Classic</span>
+            <span class="item-price">5.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Red (strawberry only)</span>
+            <span class="item-price">6.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Crimson</span>
+            <span class="item-price">6.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Blue</span>
+            <span class="item-price">6.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Combo (blue + crimson)</span>
+            <span class="item-price">7.000 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── COCKTAILS CORE ── -->
+      <div class="cat-card reveal" data-category="cold drinks">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Cocktails_Core.png" alt="Cocktails Core">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Cocktails Core</div>
+            <div class="card-subtitle">Smoothie · Classic · Juice</div>
+          </div>
+          <span class="card-count">8 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Lemon juice</span>
+            <span class="item-price">4.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Strawberry juice</span>
+            <span class="item-price">4.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Combo (lemon + strawberry)</span>
+            <span class="item-price">5.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Strawberry pure</span>
+            <span class="item-price na">—</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Banana pure</span>
+            <span class="item-price">6.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Chocolate + banana</span>
+            <span class="item-price">6.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Banana + strawberry</span>
+            <span class="item-price">6.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Red fruits</span>
+            <span class="item-price">6.500 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PIZZA ── -->
+      <div class="cat-card reveal" data-category="food">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Pizza.png" alt="Pizza">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Pizza</div>
+            <div class="card-subtitle">Pizzas artisanales</div>
+          </div>
+          <span class="card-count">5 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Escalope</span>
+            <span class="item-price">11.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Thon</span>
+            <span class="item-price">10.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">4 saisons</span>
+            <span class="item-price">11.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">4 fromage</span>
+            <span class="item-price">11.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name" style="color:var(--gold2);">Pizza Tranche</span>
+            <span class="item-price">1.500 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MAKLOUB ── -->
+      <div class="cat-card reveal" data-category="food">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Makloub.png" alt="Makloub">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Makloub</div>
+            <div class="card-subtitle">Spécialités locales</div>
+          </div>
+          <span class="card-count">4 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Cordon bleu</span>
+            <span class="item-price">12.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Escalope</span>
+            <span class="item-price">11.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Jambon</span>
+            <span class="item-price">11.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Royal (tout dedans)</span>
+            <span class="item-price">13.000 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── TABOUNA ── -->
+      <div class="cat-card reveal" data-category="food">
+        <div class="card-header">
+          <div class="card-icon" style="border-radius:12px; overflow:hidden;">
+            <img src="assets/images/tabouna_premium_1778656218253.png" alt="Tabouna" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Tabouna</div>
+            <div class="card-subtitle">Pain traditionnel garni</div>
+          </div>
+          <span class="card-count">3 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Tabouna Jambon</span>
+            <span class="item-price">4.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Tabouna Thon</span>
+            <span class="item-price">5.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Tabouna Escalope</span>
+            <span class="item-price">6.000 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── BAGUETTE FARCIE ── -->
+      <div class="cat-card reveal" data-category="food">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Baguette_Farcie.png" alt="Baguette Farcie">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Baguette Farcie</div>
+            <div class="card-subtitle">Sandwichs garnis</div>
+          </div>
+          <span class="card-count">4 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Baguette Thon</span>
+            <span class="item-price">7.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Baguette Jambon</span>
+            <span class="item-price">5.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Baguette Escalope</span>
+            <span class="item-price">7.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Baguette Cordon bleu</span>
+            <span class="item-price">7.000 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CORNET ── -->
+      <div class="cat-card reveal" data-category="food">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Cornet.png" alt="Cornet">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Cornet</div>
+            <div class="card-subtitle">Cornets garnis</div>
+          </div>
+          <span class="card-count">4 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Thon</span>
+            <span class="item-price">7.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Jambon</span>
+            <span class="item-price">5.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Escalope</span>
+            <span class="item-price">7.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Royal</span>
+            <span class="item-price">8.000 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── BURGER ── -->
+      <div class="cat-card reveal" data-category="food">
+        <div class="card-header">
+          <div class="card-icon">
+            <img src="assets/images/Burger.png" alt="Burger">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Burger</div>
+            <div class="card-subtitle">Burgers maison</div>
+          </div>
+          <span class="card-count">4 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Burger Simple (steak)</span>
+            <span class="item-price">7.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Burger Poulet</span>
+            <span class="item-price">6.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Cheeseburger</span>
+            <span class="item-price">7.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Burger Thon</span>
+            <span class="item-price">6.000 dt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── GÂTEAUX ── -->
+      <div class="cat-card reveal" data-category="dessert food">
+        <div class="card-header">
+          <div class="card-icon" style="border-radius:12px; overflow:hidden;">
+            <img src="assets/images/gateaux_premium_1778656518833.png" alt="Gâteaux" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="card-title-group">
+            <div class="card-title">Gâteaux</div>
+            <div class="card-subtitle">Pâtisseries fines</div>
+          </div>
+          <span class="card-count">6 items</span>
+        </div>
+        <div class="card-body">
+          <div class="menu-item">
+            <span class="item-name">Opera</span>
+            <span class="item-price">4.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Fondant</span>
+            <span class="item-price">3.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Cheese Cake</span>
+            <span class="item-price">4.000 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Chocolat Noisette</span>
+            <span class="item-price">3.500 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Pistache</span>
+            <span class="item-price">4.200 dt</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Chocolate Nuts</span>
+            <span class="item-price">4.000 dt</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /cards-grid -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     HORAIRES SECTION
+═══════════════════════════════════════ -->
+<section class="horaires-section" id="horaires">
+  <div class="section-inner">
+    <div class="horaires-card reveal">
+      <div class="horaires-glass"></div>
+      <div class="horaires-content">
+        <p class="sec-badge">Informations</p>
+        <h2 class="sec-title" style="color:var(--white);">Horaires d’<em>ouverture</em></h2>
+        <div class="ornament">
+          <div class="orn-line" style="background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2))"></div>
+          <div class="orn-diamond" style="background:rgba(255,255,255,0.2)"></div>
+          <div class="orn-line r" style="background:linear-gradient(90deg,rgba(255,255,255,0.2),transparent)"></div>
+        </div>
+        
+        <div class="horaires-grid">
+          <div class="horaires-col">
+            <div class="horaires-row"><span class="day">Lundi</span><span class="dots"></span><span class="hours">07:00 – 23:30</span></div>
+            <div class="horaires-row"><span class="day">Mardi</span><span class="dots"></span><span class="hours">07:00 – 23:30</span></div>
+            <div class="horaires-row"><span class="day">Mercredi</span><span class="dots"></span><span class="hours">07:00 – 23:30</span></div>
+            <div class="horaires-row"><span class="day">Jeudi</span><span class="dots"></span><span class="hours">07:00 – 23:30</span></div>
+          </div>
+          <div class="horaires-col">
+            <div class="horaires-row"><span class="day">Vendredi</span><span class="dots"></span><span class="hours">07:00 – 23:30</span></div>
+            <div class="horaires-row"><span class="day">Samedi</span><span class="dots"></span><span class="hours">07:00 – 23:30</span></div>
+            <div class="horaires-row highlight-day"><span class="day">Dimanche</span><span class="dots"></span><span class="hours">08:30 – 22:00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     INSTAGRAM SECTION
+═══════════════════════════════════════ -->
+<section class="insta-section">
+  <div class="section-inner text-center">
+    <p class="sec-badge" style="color: rgba(255,255,255,0.45);">Suivez-nous</p>
+    <h2 class="sec-title reveal">Notre <em style="color:var(--gold2)">Instagram</em></h2>
+    <div class="ornament reveal">
+      <div class="orn-line" style="background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2))"></div>
+      <div class="orn-diamond" style="background:rgba(255,255,255,0.2)"></div>
+      <div class="orn-line r" style="background:linear-gradient(90deg,rgba(255,255,255,0.2),transparent)"></div>
+    </div>
+    <p class="insta-quote reveal">
+      "Coffee shop et restaurant où vous pouvez étudier, vous détendre le matin et vous amuser lors de nos événements le soir"
+    </p>
+    <a href="https://www.instagram.com/thecozyplace2026?igsh=eHQzaGN6amtxN3Rw" target="_blank" class="insta-btn reveal">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @thecozyplace2026
+    </a>
+    <p class="insta-handle reveal">Suivez nos événements · Stories · Menus du jour</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer>
+  <span class="footer-logo">The Cozy Place</span>
+  <strong>Restaurant · Coffee Bar · Pizzeria</strong><br>
+  <a href="https://maps.google.com/?q=Rue+du+Lac+Huron+Tunis" target="_blank">Rue du Lac Huron, Tunis 1053</a>
+  &nbsp;·&nbsp;
+  <a href="tel:54915604">54 915 604</a>
+  &nbsp;·&nbsp; Ouvert jusqu'à 23:30<br><br>
+  <div style="margin: 20px 0;">
+    <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" class="footer-map-btn">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Voir la localisation
+    </a>
+  </div>
+  <span style="font-size: 12px; opacity: 0.45;">© 2026 The Cozy Place · Tous droits réservés</span>
+</footer>
+
+<!-- Coffee Mascot -->
+<div class="coffee-mascot-container">
+  <div class="coffee-mascot">
+    <img src="assets/images/coffee_mascot_sleepy_1778656639766.png" alt="Sleepy Coffee" class="mascot-sleepy">
+    <img src="assets/images/coffee_mascot_awake_1778656692880.png" alt="Awake Coffee" class="mascot-awake">
+  </div>
+  <div class="mascot-tooltip">Besoin d'un café ?</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
