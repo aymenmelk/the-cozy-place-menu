@@ -120,6 +120,8 @@ body {
   height: 160px;
   margin: 0 auto 32px;
   animation: popIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  overflow: hidden;        /* ← THIS is the real fix */
+  border-radius: 50%;      /* ← clips everything to circle */
 }
 
 @keyframes popIn {
@@ -145,8 +147,12 @@ body {
 .logo-img {
   position: absolute;
   inset: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
+  transform: none;
   z-index: 1;
 }
 
@@ -1465,11 +1471,6 @@ footer a:hover { text-decoration: underline; }
 }
 
 
-/* Ensure logo is perfectly centered and scaled inside the dark ring */
-.logo-img {
-  object-fit: contain !important;
-  transform: scale(0.95);
-}
 
 /* ═══════════════════════════════════════
    MOOD SECTION: BREW YOUR MOOD
