@@ -193,3 +193,125 @@ document.querySelectorAll('.cat-card').forEach(card => {
     card.style.transform = '';
   });
 });
+
+/* ══ MOOD FEATURE: BREW YOUR MOOD ══ */
+const moodData = {
+  sleepy: {
+    icon: '☕',
+    title: 'Doux Réveil',
+    quote: '"Un réveil en douceur avec la chaleur d\'un bon café."',
+    drink: 'Cappuccino Mousseux',
+    food: 'Viennoiserie Chaude'
+  },
+  focused: {
+    icon: '🎯',
+    title: 'Énergie Pure',
+    quote: '"De grandes idées commencent par une petite pause café."',
+    drink: 'Double Espresso',
+    food: 'Fondant Chocolat'
+  },
+  relaxed: {
+    icon: '🍃',
+    title: 'Instant Zen',
+    quote: '"Prenez une gorgée de calme et relâchez la pression."',
+    drink: 'Vanilla Latte',
+    food: 'Cheese Cake'
+  },
+  hungry: {
+    icon: '🍕',
+    title: 'Gourmandise',
+    quote: '"Le bonheur se trouve dans une bonne part de pizza."',
+    drink: 'Coca Cola Frais',
+    food: 'Pizza 4 Fromage'
+  },
+  romantic: {
+    icon: '✨',
+    title: 'Ambiance Cosy',
+    quote: '"La magie opère toujours autour d\'une bonne table."',
+    drink: 'Mojito Crimson',
+    food: 'Gâteau Opéra'
+  },
+  chill: {
+    icon: '🍹',
+    title: 'Moment Détente',
+    quote: '"De bonnes boissons. De la meilleure compagnie."',
+    drink: 'Mojito Blue',
+    food: 'Pizza Escalope'
+  },
+  energy: {
+    icon: '🚀',
+    title: 'Coup de Boost',
+    quote: '"L\'énergie de ce café vous mènera loin aujourd\'hui."',
+    drink: 'Ice Americano',
+    food: 'Burger Poulet'
+  },
+  study: {
+    icon: '📖',
+    title: 'Concentration Max',
+    quote: '"Un esprit clair et un café chaud pour exceller."',
+    drink: 'Americano',
+    food: 'Baguette Thon'
+  },
+  rain: {
+    icon: '🌧️',
+    title: 'Pluie & Chaleur',
+    quote: '"Rien de mieux que la pluie dehors et un café chaud dedans."',
+    drink: 'Chocolat Chaud',
+    food: 'Gâteau Chocolat Noisette'
+  }
+};
+
+const moodBtns = document.querySelectorAll('.mood-btn');
+const moodGrid = document.getElementById('mood-grid');
+const moodResult = document.getElementById('mood-result');
+const moodClose = document.getElementById('mood-close');
+
+if (moodBtns.length > 0 && moodResult) {
+  moodBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mood = btn.dataset.mood;
+      const data = moodData[mood];
+      
+      if (data) {
+        // Hide grid, show result
+        moodGrid.style.display = 'none';
+        
+        document.getElementById('mr-icon').textContent = data.icon;
+        document.getElementById('mr-title').textContent = data.title;
+        document.getElementById('mr-quote').textContent = data.quote;
+        document.getElementById('mr-drink').textContent = data.drink;
+        document.getElementById('mr-food').textContent = data.food;
+        
+        moodResult.style.display = 'block';
+      }
+    });
+  });
+
+  moodClose.addEventListener('click', () => {
+    moodResult.style.display = 'none';
+    moodGrid.style.display = 'grid';
+  });
+}
+
+/* ══ DYNAMIC MASCOT TOOLTIPS ══ */
+const mascotTooltips = [
+  "Besoin d'un café ?",
+  "Aujourd'hui, c'est cappuccino !",
+  "Une petite pause ?",
+  "Passez une belle journée ✨",
+  "Il fait soif, non ?",
+  "Un fondant au chocolat ?"
+];
+
+setInterval(() => {
+  const tooltip = document.getElementById('mascot-msg');
+  if (tooltip) {
+    const randomMsg = mascotTooltips[Math.floor(Math.random() * mascotTooltips.length)];
+    // Add brief fade out/in effect
+    tooltip.style.opacity = '0';
+    setTimeout(() => {
+      tooltip.textContent = randomMsg;
+      tooltip.style.opacity = '';
+    }, 300);
+  }
+}, 8000);

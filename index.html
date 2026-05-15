@@ -73,7 +73,7 @@
 
     <!-- Social buttons -->
     <div class="socials">
-      <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" class="soc-btn soc-map">
+      <a href="https://www.google.com/maps/place/The+Cosy+Place/@36.836747,10.2466862,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd35fa7ca0f7e3:0xe363ca5c22647010!8m2!3d36.836747!4d10.2466862!16s%2Fg%2F11nhcmkvbw?entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="soc-btn soc-map">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
         Voir la localisation
       </a>
@@ -798,6 +798,87 @@
 </section>
 
 <!-- ═══════════════════════════════════════
+     MOOD SECTION: BREW YOUR MOOD
+═══════════════════════════════════════ -->
+<section class="mood-section" id="mood">
+  <div class="section-inner text-center">
+    <p class="sec-badge">While You Wait</p>
+    <h2 class="sec-title reveal">Today’s <em>Coffee Energy</em></h2>
+    <div class="ornament reveal">
+      <div class="orn-line"></div>
+      <div class="orn-diamond"></div>
+      <div class="orn-line r"></div>
+    </div>
+    <p class="sec-desc reveal" style="margin-bottom: 48px;">
+      Comment vous sentez-vous aujourd'hui ?<br>Choisissez votre humeur et laissez-nous vous recommander votre instant parfait.
+    </p>
+
+    <!-- Mood Selection Grid -->
+    <div class="mood-grid reveal" id="mood-grid">
+      <button class="mood-btn" data-mood="sleepy">
+        <span class="mood-emoji">😴</span>
+        <span class="mood-label">Sleepy</span>
+      </button>
+      <button class="mood-btn" data-mood="focused">
+        <span class="mood-emoji">⚡</span>
+        <span class="mood-label">Focused</span>
+      </button>
+      <button class="mood-btn" data-mood="relaxed">
+        <span class="mood-emoji">🌿</span>
+        <span class="mood-label">Relaxed</span>
+      </button>
+      <button class="mood-btn" data-mood="hungry">
+        <span class="mood-emoji">🍕</span>
+        <span class="mood-label">Hungry</span>
+      </button>
+      <button class="mood-btn" data-mood="romantic">
+        <span class="mood-emoji">💘</span>
+        <span class="mood-label">Romantic</span>
+      </button>
+      <button class="mood-btn" data-mood="chill">
+        <span class="mood-emoji">🎉</span>
+        <span class="mood-label">Chill</span>
+      </button>
+      <button class="mood-btn" data-mood="energy">
+        <span class="mood-emoji">🔥</span>
+        <span class="mood-label">Need Energy</span>
+      </button>
+      <button class="mood-btn" data-mood="study">
+        <span class="mood-emoji">📚</span>
+        <span class="mood-label">Study Session</span>
+      </button>
+      <button class="mood-btn" data-mood="rain">
+        <span class="mood-emoji">🌧️</span>
+        <span class="mood-label">Cozy Rain</span>
+      </button>
+    </div>
+
+    <!-- Mood Result Card (Hidden by default) -->
+    <div class="mood-result-card" id="mood-result" style="display: none;">
+      <div class="mood-glass"></div>
+      <button class="mood-close-btn" id="mood-close">&times;</button>
+      <div class="mood-result-content">
+        <div class="mood-result-icon" id="mr-icon">☕</div>
+        <h3 class="mood-result-title" id="mr-title">Votre Moment Cozy</h3>
+        <p class="mood-result-quote" id="mr-quote">"..."</p>
+        
+        <div class="mood-pairing">
+          <div class="pairing-item">
+            <span class="pairing-label">Recommandé</span>
+            <strong id="mr-drink">Boisson</strong>
+          </div>
+          <div class="pairing-plus">+</div>
+          <div class="pairing-item">
+            <span class="pairing-label">À savourer</span>
+            <strong id="mr-food">Gourmandise</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
      INSTAGRAM SECTION
 ═══════════════════════════════════════ -->
 <section class="insta-section">
@@ -826,12 +907,12 @@
 <footer>
   <span class="footer-logo">The Cozy Place</span>
   <strong>Restaurant · Coffee Bar · Pizzeria</strong><br>
-  <a href="https://maps.google.com/?q=Rue+du+Lac+Huron+Tunis" target="_blank">Rue du Lac Huron, Tunis 1053</a>
+  <a href="https://www.google.com/maps/place/The+Cosy+Place/@36.836747,10.2466862,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd35fa7ca0f7e3:0xe363ca5c22647010!8m2!3d36.836747!4d10.2466862!16s%2Fg%2F11nhcmkvbw?entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Rue du Lac Huron, Tunis 1053</a>
   &nbsp;·&nbsp;
   <a href="tel:54915604">54 915 604</a>
   &nbsp;·&nbsp; Ouvert jusqu'à 23:30<br><br>
   <div style="margin: 20px 0;">
-    <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank" class="footer-map-btn">
+    <a href="https://www.google.com/maps/place/The+Cosy+Place/@36.836747,10.2466862,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd35fa7ca0f7e3:0xe363ca5c22647010!8m2!3d36.836747!4d10.2466862!16s%2Fg%2F11nhcmkvbw?entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="footer-map-btn">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
       Voir la localisation
     </a>
@@ -841,11 +922,12 @@
 
 <!-- Coffee Mascot -->
 <div class="coffee-mascot-container">
+  <div class="mascot-steam"></div>
   <div class="coffee-mascot">
     <img src="assets/images/coffee_mascot_sleepy_1778656639766.png" alt="Sleepy Coffee" class="mascot-sleepy">
     <img src="assets/images/coffee_mascot_awake_1778656692880.png" alt="Awake Coffee" class="mascot-awake">
   </div>
-  <div class="mascot-tooltip">Besoin d'un café ?</div>
+  <div class="mascot-tooltip" id="mascot-msg">Besoin d'un café ?</div>
 </div>
 
 <script src="script.js"></script>
